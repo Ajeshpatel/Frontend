@@ -1,0 +1,62 @@
+<!-- Form Concept -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Captcha Form</h1>
+    <form>
+        <label for="Captcha">Name: </label>
+        <input type="text" id="Captcha" name="captcha">
+        <br>
+        <br>
+        <!-- Checkbox -->
+        <label>Choose Tech:</label>
+        <label>
+            <input type="checkbox" name="option1" value="html" checked>HTML
+        </label>
+        <label>
+            <input type="checkbox" name="option2" value="css">CSS
+        </label>
+        <label>
+            <input type="checkbox" name="option3" value="javascript">JavaScript
+        </label> <br><br>
+
+        <!-- Radio Input -->
+        <label>Gender:</label>
+        <label>
+            <input type="radio" name="gender" value="male">Male
+        </label>
+        <label>
+            <input type="radio" name="gender" value="male">FeMale
+        </label><br><br>
+
+        <!-- File Upload -->
+        <label for="file">Upload Resume:</label>
+        <input type="file" name="upload" accept=".png, .pdf" id="file"> <br><br>
+
+        <!-- Range -->
+        <label for="range">Rate (html 10)</label>
+        <input type="range" min="1" max="10" name="range" id="range" value="0"> <br><br>
+
+        <!-- Select Tag -->
+        <label for="ttech">Select Tech:</label>
+        <select id="tech" name="techStack">
+            <option value="java">Java</option>
+            <option value="frontend">FrontEnd</option>
+            <option value="mysqul">MySQL</option>
+        </select><br><br>
+
+         <!-- Textarea -->
+        <label for="comment">Your Comments:</label>
+        <textarea id="comment" placeholder="Enter your comments" rows="5" cols="30" ></textarea><br><br>
+
+
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+    </form>
+</body>
+</html>
