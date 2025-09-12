@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BoxModel</title>
+
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+        div {
+            width: 400px;
+            height: 100px;
+            background-color: aqua;
+            /* 1 - 4side, 2 - 100px top&bottom 30px left&right , 4 - top right bottom left*/
+            padding: 100px 30px;
+            border: 4px solid red;
+            margin: 50px 100px;
+            outline: 4px dotted black;
+            /* overflow: scroll; */
+            overflow-x: hidden;
+            /*overflow: auto; */
+        }
+
+        #normaldiv{
+            width: 200px;
+            height: 50px;
+            background-color: aquamarine;
+            padding: 10px;
+            border: 5px solid black;
+            margin: 10px;
+        }
+        #borderdiv{
+            width: 200px;
+            height: 50px;
+            background-color: rgb(22, 8, 128);
+            box-sizing: border-box;
+            padding: 10px;
+            border: 5px solid black;
+            margin: 10px;
+            
+        }
+        #contentdiv{
+            width: 200px;
+            height: 50px;
+            background-color: rgb(191, 106, 22);
+            box-sizing: content-box;
+            padding: 10px;
+            border: 5px solid black;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div>KODNEST Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum quidem, exercitationem corporis, ipsam saepe ducimus, officiis magni illum blanditiis voluptatem nostrum sit cum nemo debitis consequatur vitae rem aspernatur ut.
+    Labore, esse reprehenderit numquam, architecto ipsa ex laborum amet libero aliquid doloremque soluta porro! Similique quaerat fugit possimus vero fugiat tempore quia. Rerum obcaecati minus delectus saepe, deleniti eos magnam?
+    Corrupti recusandae dolores voluptatibus dolorem amet quis esse asperiores fuga id sed ea culpa eaque qui autem ipsum, voluptatem iure dolorum exercitationem nesciunt obcaecati dicta animi alias aut tenetur. Quam!</div>
+
+    <div id="normaldiv">KODNEST</div>
+    <div id="borderdiv">Box-Sizing: border-box</div>
+    <div id="contentdiv">Box-Sizing: content-box</div>
+
+</body>
+</html>
