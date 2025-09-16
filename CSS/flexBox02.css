@@ -27,11 +27,14 @@
 
 #div1 {
     flex-grow: 1;
-    flex-shrink: 2;
+    flex-shrink: 2; 
 }
 #div3 {
     flex-grow: 2;
     flex-shrink: 4;
+    flex-basis: auto;  /* width depend on content width */
+    align-self: center;
+    order: 2;
 }
 
 
