@@ -1,0 +1,36 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+div {
+    width: 200px;
+    height: 200px;
+    border:2px solid black;
+    margin:10em;
+    background-color:aqua;
+    /* transform: translate(200px, 100px); */
+    /* +ve x - right y bottom, -ve x - left, y axis top */
+}
+
+div:hover {
+    /* transform: scale(2); */
+
+    transition-duration: 1.5s;
+
+    /* transition-delay: 0.5s; */
+
+    
+    /* transform: skew(25deg, -35deg);  
+    skew (x-angle, -y-angle)  */
+    
+    /* transform: rotate(360deg);  */
+    /* +ve value - clock wise,  -ve value - anticlock wise */
+    transform: rotate(-15deg);
+    /* transform-origin: top right;
+    transform-origin: bottom right;
+    transform-origin: top left;
+    transform-origin: bottom left; */
+
+}
