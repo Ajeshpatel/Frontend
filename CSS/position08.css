@@ -3,18 +3,26 @@
     padding: 0;
     box-sizing: border-box;
 }
+body {
+    height: 200vh;
+}
 
 .p-div {
     width: 600px;
     height: 400px;
     background-color: brown;
     border: 2px solid black;
+    margin-top: 1em;
 
     /* position: static; element will be not moved */
 
-    position: absolute;
+    /* position: absolute;
+    consider browser or body, parents so div will move from browsers screen. 
     left: 200px;
-    top: 200px;
+    top: 200px; */
+
+    position:relative;
+    /* This div started act like parents */
 }
 
 .c-div {
@@ -26,6 +34,29 @@
     /* position: static; element will be not moved */
 
     position: absolute;
-    left: 100px;
-    top: 100px;
+    left: 20px;
+    top: 20px;
+}
+
+.fixed {
+    height: 100px;
+    width: 100px;
+    background-color: yellowgreen;
+    text-align: center;
+    border: 2px solid black;
+    position:fixed;
+    top: 0px;
+    right: 0px;
+}
+
+.sticky {
+    width: 100%;
+    height: 50px;
+    background-color:yellow;
+    border: 2px solid black;
+    position:sticky;
+    top: 0px;
+    
+    z-index: 2;
+    /* Highest  z-index appears first */
 }
