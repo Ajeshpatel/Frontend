@@ -123,3 +123,20 @@ for(let key in student) {
 // forEach method: forEach is a method, used to iterate array element one by one and perform operation on each array element.
 let number = [1,2,3,4,5];
 number.forEach((num) => console.log(num*num));
+
+
+// Break Keyword: break keyword is used to break the loop.(In case of nested loop, it will be break only its outer loop).
+for (let i = 1; i<=5; i++){
+    if (i === 3){
+        break;
+    }
+    console.log(i);
+}
+
+// continue keyword: continue keyword is used to skip a particular value.
+for (let i = 1; i<=5; i++){
+    if (i === 3){
+        continue;
+    }
+    console.log(i);
+}
