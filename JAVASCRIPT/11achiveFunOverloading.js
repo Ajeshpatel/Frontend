@@ -23,6 +23,19 @@ console.log(add(1));
 console.log(add(1,2));
 console.log(add(1,2,3));
 console.log(add(1,2,3,4));
+console.log("-------------------------");
 
 
 // Using Spread Operator:
+function addition(...numbers) {
+    let sum = 0;
+    for(let num of numbers) {
+        sum = sum + num;
+    }
+    return sum;
+}
+console.log(addition());
+console.log(addition(1));
+console.log(addition(1,2));
+console.log(addition(1,2,3));
+console.log(addition(1,2,3,4));
