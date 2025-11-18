@@ -8,19 +8,18 @@ const initialState = {
     }
 }
 
-//Action
-const addMoney = () => ({
+//Action creators
+export const addMoney = (amt) => ({
     type: "addMoney",
     payload: amt
 })
 
-const removeMoney = (amt) => ({
+export const removeMoney = (amt) => ({
     type: "removeMoney",
     payload: amt
 })
 
 // Reducer
-
 function reducer(state = initialState, action) {
   switch (action.type) {
     case "addMoney":
