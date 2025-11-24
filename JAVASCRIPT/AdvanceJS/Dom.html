@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 id="heading">Heading</h1>
+    <h2 id="h">Heading</h2>
+    <p class="odd">Para 1</p>
+    <p>Para 2</p>
+    <p class="odd">Para 3</p>
+    <p>Para 4</p>
+
+    <button onClick="change()">click for change</button>
+    <br />
+    <br />
+
+    <label>Fname:</label>
+    <input type="text" name="username" placeholder="First name" />
+    <label>Lname:</label>
+    <input type="text" name="username" placeholder="Last name" />
+    <button onClick="showValue()">cleck me</button>
+    <i>
+        <p id="demo"></p>
+    </i>
+
+    <script>
+        // getElementByClassName
+        const oddpara = document.getElementsByClassName("odd");
+        for (let i = 0; i < oddpara.length; i++) {
+            oddpara[i].style.backgroundColor = "yellow";
+            oddpara[i].style.fontSize = "2em";
+            oddpara[i].style.fontWeight = "bold";
+        }
+
+        function change() {
+            //  getElementsByTagName
+            document.getElementsByTagName("p")[0].style.color = "red"; //para 1, because accessing using index number;
+            document.getElementsByTagName("p")[1].style.color = "blue";
+            const para = document.getElementsByTagName("p");
+            for (let i = 0; i < 4; i++) {
+                para[i].style.backgroundColor = "purple";
+                para[i].style.fontSize = "2em";
+            }
+
+            // getElementById
+            document.getElementById("heading").textContent = "DOM in JavaScript";
+            document.getElementById("h").innerHTML = "DOM in JS";
+        }
+
+        function showValue() {
+            // getElementsByName
+            let name = document.getElementsByName("username");
+            let allValues = "";
+
+            for (let i = 0; i < name.length; i++) {
+                allValues = allValues + name[i].value + " ";
+            }
+
+            document.getElementById("demo").innerText = allValues.trim();
+        }
+    </script>
+</body>
+
+</html>

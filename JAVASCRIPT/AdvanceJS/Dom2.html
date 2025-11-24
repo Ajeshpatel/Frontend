@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Dom MAnipulation</h1>
+
+    <h2>querySelector</h2>
+    <P class = "qp">para1</P>
+    <P class = "qp">para2</P>
+    <P class = "qp">para3</P>
+    <P class = "qp">para4</P>
+
+    <h2>querySelectorAll</h2>
+    <P class = "qap">para1</P>
+    <P class = "qap">para2</P>
+    <P class = "qap">para3</P>
+    <P class = "qap">para4</P>
+
+    <script>
+        //querySelector
+        document.querySelector("p").style.color="red"; //select or change first p tag
+        document.querySelector(".qp").style.backgroundColor="gray"; //select or change first pq class
+
+        let para = document.querySelectorAll(".qap");
+        for(let i = 0; i < para.length; i++) {
+            para[i].style.backgroundColor = "yellow";
+            para[i].style.fontWeight = "bold";
+            para[i].style.fontSize = "1.5em";
+        }
+
+    </script>
+</body>
+</html>
