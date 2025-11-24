@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            background-color: aqua;
+            border: 4px solid black;
+            height: 100px;
+            width: 100px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome Dom Manipulation</h1>
+    <h3>Add or Remove Element</h3>
+    <button onClick="addBox()">Add Box</button>
+    <button onclick="removeBox()">Remove Box</button>
+
+    <script>
+
+        function addBox() {
+            let b = document.querySelector("body");
+            let mydiv = document.createElement("div");
+            b.appendChild(mydiv);
+        }
+
+        function removeBox() {
+            let b = document.querySelector("body");
+            let divItem = document.querySelector("div");
+            b.removeChild(divItem);
+        }
+
+    </script>
+</body>
+</html>

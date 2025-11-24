@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .highlight{
+            background-color: Yellow;
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="text">Dom Manipulation usinf classes</h1>
+    <button onClick="addHighlight()">Add Highlight</button>
+    <button onClick="removeHighlight()">Remove Highlight</button>
+    <button onClick="toggleHighlight()">Toggle Highlight</button>
+    <button onClick="checkHighlight()">Check Highlight</button>
+
+    <script>
+        let text = document.getElementById("text");
+
+        function addHighlight() {
+            text.classList.add("highlight");
+        }
+
+        function removeHighlight() {
+            text.classList.remove("highlight");
+        }
+
+        function toggleHighlight() {
+            text.classList.toggle("highlight");
+        }
+
+        function checkHighlight() {
+            let check = text.classList.contains('highlight');
+
+            if(check) {
+                alert("class is active");
+            }
+            else{
+                alert("class is not active");
+            }
+        }
+
+    </script>
+</body>
+</html>

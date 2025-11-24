@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .tgl {
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <h1>Toggle between Light and Dark mode</h1>
+    <button onClick="lightDark()">Dark Mode</button>
+
+    <script>
+        let b = document.querySelector("body");
+        let btn = document.querySelector("button");
+        let bt = true;
+        function lightDark() {
+            bt = !bt;
+            b.classList.toggle("tgl");
+            if(bt) {
+                btn.textContent = "Dark Mode";
+            }
+            else{
+                btn.textContent = "Light Mode";
+            }
+        }
+    </script>
+</body>
+</html>
