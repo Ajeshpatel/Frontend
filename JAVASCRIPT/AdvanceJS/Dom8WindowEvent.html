@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="height: 200vh;">
+    <div>
+        <h1>Window Event</h1>
+        
+    </div>
+
+    <script>
+        // window Events
+
+        document.addEventListener("DOMContentLoaded", () => {
+            alert('Dom fully loaded and parsed');
+        });
+
+        document.addEventListener("resize", () => {
+            console.log("Window Resize");
+        });
+
+        document.addEventListener("scroll", () => {
+            console.log("User is scrolling");
+        });
+    </script>
+</body>
+</html>

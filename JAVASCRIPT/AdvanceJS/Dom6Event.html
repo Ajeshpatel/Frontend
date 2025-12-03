@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box {
+            height: 100px;
+            width: 100px;
+            background-color: aqua;
+            border: 2px solid black;
+        }
+        #box2 {
+            height: 100px;
+            width: 300px;
+            background-color: aqua;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div id="box">
+        Mouse Event
+        <p id = "text"></p>
+    </div>
+
+    <br>
+
+    <div id="box2">
+        keyboard Events
+        <input type="text" id="ip">
+    </div>
+
+    <script>
+        // Mouse Events
+        // click:
+        const box = document.getElementById("box");
+        const p = document.getElementById("text");
+        box.addEventListener('click', () => {
+            box.style.backgroundColor = "red";
+        });
+        box.addEventListener('dblclick', () => {
+            box.style.backgroundColor = "yellow";
+        });
+        box.addEventListener('mouseover', () => {
+            //alert("You are over the box");
+            box.style.border = '5px solid black';
+        });
+        box.addEventListener('mouseout', () => {
+            box.style.border = '2px solid black';
+
+        });
+        box.addEventListener('mousemove', (event) => {
+            p.innerText = `X: ${event.offsetX} and Y: ${event.offsetY}.`
+        });
+        
+
+        // keyboard Events
+       //const box2 = document.getElementById("box2");
+        const ip = document.getElementById("ip")
+        ip.addEventListener('keydown', (e) => {
+            console.log(`Key pressed (keydown): ${e.key}`);
+        });
+        ip.addEventListener('keyup', (e) => {
+            console.log(`Key pressed (keyup): ${e.key}`);
+        });
+        ip.addEventListener('keypress', (eve) => {
+            console.log(`Key pressed (keypress): ${eve.key}`);
+        });
+
+
+    </script>
+</body>
+</html>
